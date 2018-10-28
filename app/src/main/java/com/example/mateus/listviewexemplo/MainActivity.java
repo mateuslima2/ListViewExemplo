@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         nomeBusca = (EditText) findViewById(R.id.busca);
         nomesLV = (ListView) findViewById(R.id.LV);
         nomes = new ArrayList<String>();
-
+        //liga view com a activity
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nomes);
 
         nomesLV.setAdapter(adapter);
 
         nomes.add("Mateus de Lima");
         nomes.add("Eliane Tamara");
-        nomes.add("Gernamotaa ALice");
+        nomes.add("XXXXXX XXXXX");
 
         nomeBusca.addTextChangedListener(this);
     }
@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
     public void adicionar (View view){
         nomeAdd = nomeBusca.getText().toString();
         nomes.add(nomeAdd);
-
     }
 
     public void beforeTextChanged(CharSequence s, int i, int i1, int i2) {
